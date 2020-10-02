@@ -1,1 +1,3 @@
-@import './css/_modules/_mediabreaks.css';
+@import './_modules/_tables.css';
+@import './_modules/header.css';
+@import './_modules/_mediabreaks.css';

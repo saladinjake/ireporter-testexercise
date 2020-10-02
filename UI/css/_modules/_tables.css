@@ -1,0 +1,67 @@
+@media (max-width: 768px) {
+  .table-responsive>.table {
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  .table-responsive>.table>thead,
+  .table-responsive>.table>tfoot {
+    display: none;
+  }
+
+  .table-responsive>.table>tbody {
+    display: block;
+  }
+
+  .table-responsive>.table>tbody>tr {
+    display: block;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    margin-bottom: 1.6rem;
+  }
+
+  .table-responsive>.table>tbody>tr>td {
+    background-color: #fff;
+    display: block;
+    text-align: right;
+  }
+
+  .table-responsive>.table>tbody>tr>td[item-data]:before {
+    content: attr(item-data);
+    float: left;
+    font-size: inherit;
+    font-weight: 400;
+    color: #757575;
+  }
+
+  .table-responsive>.table-border {
+    border: 0;
+  }
+
+  .table-responsive>.table-border>tbody>tr>td {
+    border: 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .table-responsive>.table-border>tbody>tr>td:last-child {
+    border-bottom: 0;
+  }
+
+  .table-responsive>.table-border>tbody>tr>td,
+  .table-responsive>.table-border>tbody>tr:nth-child(odd) {
+    background-color: #fff;
+  }
+
+  .table-responsive>.table-border>tbody>tr>td:nth-child(odd) {
+    background-color: #f5f5f5;
+  }
+
+  .table-responsive>tbody>tr:hover>td,
+  .table-responsive>tbody>tr:hover {
+    background-color: #fff;
+  }
+
+  .table-responsive>tbody>tr>td:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+}
