@@ -1,3 +1,10 @@
+:root {
+  --main-color: #361f55;
+  --primary-color: #e62c20;
+  --text-color: #ffffff;
+}
+
+
 nav ul {
   margin: 2em;
 }
@@ -45,7 +52,7 @@ nav ul li a:hover {
 }
 
 .slide-img {
-  background-image: url("../assets/images/give-info.jpg");
+  background-image: url("../../assets/images/give-info.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

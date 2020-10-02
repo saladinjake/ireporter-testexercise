@@ -1,3 +1,10 @@
+:root {
+  --main-color: #361f55;
+  --primary-color: #e62c20;
+  --text-color: #ffffff;
+}
+
+
 @media (max-width: 768px) {
   .table-responsive>.table {
     margin-bottom: 0;
