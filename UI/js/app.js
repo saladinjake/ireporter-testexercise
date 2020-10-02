@@ -67,6 +67,7 @@ const closeModalForm = (elemID) => {
 //   document.getElementById(elemID).style.display = 'none';
 // };
 
+
 // const showModal = (elemID) => {
 //   document.getElementById(elemID).style.display = 'block';
 //   closeModalForm(elemID);
