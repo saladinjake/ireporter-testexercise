@@ -12,12 +12,16 @@
     ]
   },
   "scripts": {
-
-    },
-  "repository": {
-    "type": "git",
-
+    "mocha": "mocha --compilers js:babel-register",
+    "babel-node": "babel-node --presets=env",
+    "start": "export NODE_ENV=PRODUCTION && npm run babel-node -- api/server.js",
+    "start:dev": "export NODE_ENV=DEVELOPMENT && npm run babel-node -- api/server.js",
+    "build": "babel ./ -d dist",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "coverage": "nyc reports --reporter=text-lcov | coveralls",
+    "test": "export NODE_ENV=TEST && nyc --reporter=text mocha  --timeout 100000 --compilers js:babel-register ./api/tests/ --exit --reporter spec"
   },
+
   "keywords": [
     "red-flag",
     "intervention",
