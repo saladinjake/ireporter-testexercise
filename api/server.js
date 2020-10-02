@@ -1,6 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
+
+import router from '../dummyApi/routes/routes';
+
 require('dotenv').config();
 
 const app = express();
@@ -17,7 +20,7 @@ app.get('/', (request, response) => response.status(200).json({
   message: 'Welcome to iReporter API'
 }));
 
-
+app.use('/api/v1', router);
 app.use((request, response, next) => {
   response.status(404).json({
     status: 404,
