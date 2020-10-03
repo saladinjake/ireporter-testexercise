@@ -63,15 +63,6 @@ const closeModalForm = (elemID) => {
   };
 };
 
-// const closeModal = (elemID) => {
-//   document.getElementById(elemID).style.display = 'none';
-// };
-
-
-// const showModal = (elemID) => {
-//   document.getElementById(elemID).style.display = 'block';
-//   closeModalForm(elemID);
-// };
 
 const showButton = () => {
   const btn = document.getElementById('item');
