@@ -1,3 +1,3 @@
-const apiUrl = 'http://localhost:3000/api/v1';
+const apiUrl = 'https://ireporter247.herokuapp.com/api/v1';
 
 export default apiUrl;
