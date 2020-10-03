@@ -1,0 +1,130 @@
+@import '../../../public/styles/color.scss';
+
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  .logo {
+    font-size: 44px;
+    font-family: "Candal", sans-serif;
+    color: $main-color;
+    font-weight: bold;
+  }
+  
+  .logo-name {
+    color: $primary-color;
+  }
+  
+  .logo-text {
+    color: $main-color;
+    font-family: "Candal", sans-serif;
+    font-size: 24px;
+    margin-bottom: 2em;
+  }
+
+  hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  nav {
+    ul {
+        margin: 2em;
+    }
+
+    li {
+        flex: 1 0 auto;
+        text-align: center;
+        display: block;
+        transition-duration: 0.5s;
+        padding: 1rem;
+        position: relative
+    }
+
+    a {
+        text-transform: uppercase;
+        color: #383838;
+        font-weight: 600;
+        font-size: 0.9375rem;
+        padding: 0.37rem 0.75rem;
+    }
+    a:hover {
+        background-color: $main-color;
+        color: $text-color;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+  }
+
+  ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  margin-bottom: 14px;
+}
+
+  
+.navbar {
+  font-size: 18px;
+  padding-bottom: 10px;
+  z-index:4;
+  position: relative;
+  width: 100%;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+      // display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 70px;
+      align-items: center;
+  }
+
+  .main-nav {
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+
+  .main-nav li {
+      margin: 0;
+  }
+
+  .nav-links {
+      margin-left: 40px;
+  }
+
+  .navbar-toggle {
+      display: none;
+  }
+}
+
+.fa-bars {
+  color: black;
+}
