@@ -4,7 +4,7 @@ import server from '../server';
 import pool from '../models/database';
 import {
   users
-} from './testData';
+} from './mock_data';
 
 
 const {
