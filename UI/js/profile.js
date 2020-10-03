@@ -76,6 +76,7 @@ window.addEventListener('load', (event) => {
             <td item-data="Status">${record.status}</td>
           </tr>
 
+
 `;
       tablebody.insertAdjacentHTML('beforeend', eachRecord);
     });
