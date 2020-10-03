@@ -28,7 +28,7 @@
         <li><a href="report.html" class="active">Report</a></li>
         <li> <a href="redFlag.html"> Red-flags</a></li>
         <li> <a href="intervention.html">Interventions</a></li>
-        <li> <a href="#">Log out</a></li>
+        <li> <a href="#" class="logOut">Log out</a></li>
       </ul>
     </nav>
   </div>
@@ -37,35 +37,44 @@
       <h3>Create a report</h3>
     </div>
     <div class="report">
-      <form action="" method="POST">
-        <div class="msg-div"></div>
+      <form action="" method="POST" id="reportForm">
+        <div id="msg-error"></div>
         <label for="comment">Comment:</label>
         <div class="form-group">
-          <textarea name="" id="" cols="40" rows="10" maxlength="300" placeholder="Enter comments about your report"
+          <textarea name="comment" id="comment" cols="40" rows="10" maxlength="2000" autofocus placeholder="Enter comments about your report"
             required class="form-control"></textarea>
         </div>
         <label for="type">Type of report:</label>
         <div class="form-group">
-          <select name="type" id="type" class="form-control" required>
-            <option value="select an option">Select an option</option>
-            <option value="redFlag">red-flag</option>
+          <select required id="select" class="form-control">
+            <option value="">Select an option</option>
+            <option value="red-flag">Red-flag</option>
             <option value="intervention">Intervention</option>
           </select>
         </div>
 
-        <div class="form-group">
-          <label for="file">File Type: Image, Video</label>
-          <img src="" alt="" id="image" height="100" width="100">
-          <input type="file" accept=".png,.jpg,.jpeg | video/mp4,video/x-m4v,video/*" multiple placeholder="Image, Video"
-            class="form-control" id="file-upload">
+        <div class="form-group image-msg">
+          <label for="file">File Type: Image</label>
+          <img src="./assets/images/spinner.gif" alt="spinner" class="spinner">
+          <input type="file" accept="image/*" multiple="multiple" class="form-control" id="image-upload">
+          <ul id="displayImages"></ul>
+        </div>
+        <div class="form-group video-msg">
+          <label for="file">File Type: Video</label>
+          <img src="./assets/images/spinner.gif" alt="spinner" class="spin">
+          <input type="file" accept="video/mp4,video/x-m4v,video/*" multiple="multiple" class="form-control" id="video-upload">
+          <ul id="displayVideos"></ul>
         </div>
         <div class="form-group location-div">
-          <button onclick="getLocation()" class="btn location-btn"><i class="fas fa-search-location"></i>Use current
-            location</button>
-          <p id=location-code></p>
+          <a href="#" onclick="getLocation()" class="location-btn">Use current
+            location</a>
+          <p id="location-code"></p>
         </div>
         <div class="form-group btn-div">
           <input type="submit" value="SEND REPORT" class="send-btn">
+        </div>
+        <div class="loader">
+          <img src="./assets/images/spinner.gif" alt="spinner" class="">
         </div>
       </form>
     </div>
@@ -74,67 +83,19 @@
   <div class="row">
     <div class="column">
       <div class="card">
-        <div class="">
-          <img src="./assets/images/Apapa-Ijora-Bridge2.jpg" alt="" class="" height="280" width="500">
-        </div>
-        <div class="media-body">
-          <p class="type ">Type:<span>Intervention</span></p>
-          <p class="lat">Latittude:<span>6.5243793</span></p>
-          <p class="lat">Longitude:<span>3.3792057</span></p>
-          <p class="status">Status:<span>Draft</span></p>
-          <p class="comment">Commenting on the incident</p>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="card">
-        <div class="">
-          <img src="./assets/images/bad-roads.jpg" alt="" class="" height="280" width="500">
-        </div>
-        <div class="media-body">
-          <p class="type">Type: <span>Intervention</span></p>
-          <p class="lat">Latittude: <span>6.5243793</span></p>
-          <p class="lat">Longitude: <span>3.3792057</span></p>
-          <p class="status">Status: <span>Draft</span></p>
-          <p class="comment">Commenting on the incident</p>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="card">
-        <div class="">
-          <img src="./assets/images/businessman-receive-money.jpg" alt="" class="" height="280" width="500">
-        </div>
-        <div class="media-body">
-          <p class="type">Type:<span>Red-flag</span></p>
-          <p class="lat">Latittude:<span>6.5243793</span></p>
-          <p class="long">Longitude:<span>3.3792057</span></p>
-          <p class="status">Status:<span>Draft</span></p>
-          <p class="comment">Commenting on the incident</p>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="card">
-        <div class="">
-          <img src="./assets/images/bribery-and-corruption.jpg" alt="" class="" height="280" width="500">
-        </div>
-        <div class="media-body">
-          <p class="type">Type:<span>Red-flag</span></p>
-          <p class="lat">Latittude:<span>6.5243793</span></p>
-          <p class="lat">Longitude:<span>3.3792057</span></p>
-          <p class="status">Status:<span>Draft</span></p>
-          <p class="comment">Commenting on the incident</p>
-        </div>
+        <div id="records"></div>
       </div>
     </div>
   </div>
-  <!-- </div> -->
-  <!-- </div> -->
+
   <footer>
     <p class="footer">Copyright &copy iReporter App 2018. All Rights Reserved.</p>
   </footer>
   <script src="./js/app.js"></script>
+  <script src="./js/user.js"></script>
+  <script src="./js/createRecord.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script> -->
+  <script src="./js/logOut.js"></script>
 </body>
 
 </html>
