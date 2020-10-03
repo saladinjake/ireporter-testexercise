@@ -9,7 +9,7 @@ const displayError = (message) => {
   msgDiv.appendChild(para);
 };
 
-const baseUrl = "http://localhost:3000"
+var baseUrl = "http://localhost:3000"
 
 const loginUrl = `${baseUrl}/api/v1/auth/login`;
 const loginUser = (event) => {

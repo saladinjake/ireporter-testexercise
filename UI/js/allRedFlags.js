@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000";
+var baseUrl = "http://localhost:3000";
 const loader = document.querySelector('.loader');
 
 const redFlag = `${baseUrl}/api/v1/red-flags`;

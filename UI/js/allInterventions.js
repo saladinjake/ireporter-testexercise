@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3000";
+var baseUrl = "http://localhost:3000";
 const loader = document.querySelector('.loader');
 const interventions = `${baseUrl}/api/v1/interventions`;
 

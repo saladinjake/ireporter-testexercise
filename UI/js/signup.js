@@ -7,7 +7,7 @@ const displayError = (message) => {
   para.style.color = 'red';
   msgDiv.appendChild(para);
 };
-const baseUrl = "http://localhost:3000"
+var baseUrl = "http://localhost:3000"
 
 const validNameRegex = /^[A-Za-z]{3,30}$/;
 const othernamesRegex = /^[a-zA-Z]'?([a-zA-Z]|\.| |-){3,}$/;
