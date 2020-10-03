@@ -1,4 +1,5 @@
 export const users = [{
+  // no first name validation
     firstname: '',
     lastname: 'Rema',
     othernames: 'Bemas',
@@ -6,7 +7,9 @@ export const users = [{
     email: 'Bemas@gmail.com',
     password: 'password',
     phoneNumber: '09320302323'
-  }, {
+  },
+  //no lastname validation
+  {
     firstname: 'Donald',
     lastname: '',
     othernames: 'Donald',
@@ -15,6 +18,7 @@ export const users = [{
     password: 'password',
     phoneNumber: '09320302323'
   }, {
+    // no other names validation
     firstname: 'Dunny',
     lastname: 'merandra',
     othernames: '',
@@ -23,6 +27,7 @@ export const users = [{
     password: 'password',
     phoneNumber: '07033337344'
   }, {
+    //no username validation
     firstname: 'Sammy',
     lastname: 'Allen',
     othernames: 'Mellan',
@@ -31,6 +36,7 @@ export const users = [{
     password: 'password',
     phoneNumber: '07012433453'
   }, {
+    //no email validation
     firstname: 'Sammy',
     lastname: 'Kody',
     othernames: 'Jinny',
@@ -39,6 +45,7 @@ export const users = [{
     password: 'password',
     phoneNumber: '08068291105'
   }, {
+    //no password validation
     firstname: 'Sammy',
     lastname: 'Kody',
     othernames: 'Jinny',
@@ -48,6 +55,7 @@ export const users = [{
     phoneNumber: '07044444563'
   },
   {
+    // no phone number validation
     firstname: 'Sammy',
     lastname: 'Kody',
     othernames: 'Jinny',
@@ -57,6 +65,7 @@ export const users = [{
     phoneNumber: ''
   },
   {
+    // invalid firstname validation
     firstname: 'Ai7',
 
     lastname: 'Kody',
@@ -68,7 +77,7 @@ export const users = [{
   },
   {
     firstname: 'Sammy',
-    lastname: 'A1',
+    lastname: 'A1', // invalid last name validation
     othernames: 'Jinny',
     username: 'Fireboy',
     email: 'dassy@yahoo.com',
@@ -78,7 +87,7 @@ export const users = [{
   {
     firstname: 'Sammy',
     lastname: 'Kody',
-    othernames: 'Du',
+    othernames: 'Du', //invalid other names validation
     username: 'Fireboy',
     email: 'dassy@yahoo.com',
     password: 'password',
@@ -88,7 +97,7 @@ export const users = [{
     firstname: 'Sammy',
     lastname: 'Kody',
     othernames: 'Jinny',
-    username: 'F',
+    username: 'F', // invalid username
     email: 'dassy@yahoo.com',
     password: 'password',
     phoneNumber: '07056734563'
@@ -98,7 +107,7 @@ export const users = [{
     lastname: 'Kody',
     othernames: 'Jinny',
     username: 'Fireboy',
-    email: 'dassy@',
+    email: 'dassy@', //invalid email
     password: 'password',
     phoneNumber: '07088888888'
   },
@@ -108,7 +117,7 @@ export const users = [{
     othernames: 'Jinny',
     username: 'Fireboy',
     email: 'dassy@yahoo.com',
-    password: 'pass',
+    password: 'pass', //invalid pass length
     phoneNumber: '07088888888'
   },
   {
@@ -118,7 +127,7 @@ export const users = [{
     username: 'Fireboy',
     email: 'dassy@yahoo.com',
     password: 'password',
-    phoneNumber: '070137'
+    phoneNumber: '070137' // invalid phone
   },
   {
     firstname: 'Sammy',
